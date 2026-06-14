@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multimedia Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(to right,#f1f5f9,#dbeafe);
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:35px;
+}
+
+h2{
+    text-align:center;
+    margin:30px;
+    color:#0f172a;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.media{
+    width:85%;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+iframe{
+    width:100%;
+    height:500px;
+    border-radius:15px;
+}
+
+audio{
+    width:100%;
+    margin-top:20px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    Multimedia Concepts Using HTML5 & CSS3
+</header>
+
+<h2>Image Gallery</h2>
+
+<div class="gallery">
+    <img src="https://picsum.photos/id/1015/500/300">
+    <img src="https://picsum.photos/id/1016/500/300">
+    <img src="https://picsum.photos/id/1018/500/300">
+    <img src="https://picsum.photos/id/1020/500/300">
+    <img src="https://picsum.photos/id/1024/500/300">
+    <img src="https://picsum.photos/id/1025/500/300">
+    <img src="https://picsum.photos/id/1035/500/300">
+    <img src="https://picsum.photos/id/1039/500/300">
+    <img src="https://picsum.photos/id/1040/500/300">
+    <img src="https://picsum.photos/id/1041/500/300">
+    <img src="https://picsum.photos/id/1042/500/300">
+    <img src="https://picsum.photos/id/1043/500/300">
+</div>
+
+<div class="media">
+    <h2>YouTube Video</h2>
+    <iframe 
+        src="https://www.youtube.com/embed/QKsxfMX2tZk" 
+        title="Urime Manase (Slowed Reverb) | Krishnarjuna Yudham | Nani, Anupama, Hiphop Tamizha" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+
+    <h2>Audio</h2>
+    <audio controls muted>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<footer>
+    Multimedia Concepts Project
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AchieversIT</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(90deg,#0f172a,#1e293b);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+}
+
+header img{
+    height:60px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:20px;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+
+.hero{
+    height:500px;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.hero-content button{
+    padding:12px 30px;
+    border:none;
+    background:#38bdf8;
+    color:white;
+    font-size:18px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.hero-content button:hover{
+    background:#0284c7;
+}
+
+/* Section Title */
+
+.section-title{
+    text-align:center;
+    margin:50px 0 20px;
+    font-size:35px;
+    color:#1e293b;
+}
+
+/* Gallery */
+
+.gallery{
+    padding:20px 50px 60px;
+    background-color: lightgray;
+}
+
+.gallery-row{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+.gallery img{
+    width:280px;
+    height:200px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+/* Footer */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.footer-box{
+    flex:1;
+    min-width:250px;
+}
+
+.footer-box img{
+    width:220px;
+    margin-bottom:15px;
+}
+
+.footer-box h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+    color:#cbd5e1;
+    text-decoration:none;
+    line-height:30px;
+}
+
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box li:hover,
+.footer-box a:hover{
+    color:white;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:35px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="Logo">
+
+<nav>
+    <a href="#">All Courses</a>
+    <a href="#">Placements</a>
+    <a href="#">Internship</a>
+    <a href="#">Existing Students</a>
+    <a href="#">About Us</a>
+    <a href="#">Reviews</a>
+    <a href="#">Blog</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+    <h1>Welcome To AchieversIT</h1>
+    <p>Learn Trending Technologies & Build A Successful Career</p>
+    <button>Explore Courses</button>
+</div>
+
+</section>
+
+<h2 class="section-title">Trending Courses</h2>
+
+<section class="gallery">
+
+<div class="gallery-row">
+
+<img src=data:image/jpeg;base64,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>
+
+<img src="https://www.achieversit.com/management/uploads/course_image/python-img1.jpg" alt="">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600" alt="Data Science">
+<img src="https://www.achieversit.com/management/uploads/course_image/mean-img.jpg" alt="">
+
+</div>
+
+<div class="gallery-row">
+
+<img src="https://www.achieversit.com/management/uploads/course_image/vuejs-img.jpeg" alt="">
+<img src="https://www.achieversit.com/management/uploads/course_image/mern-img.jpg" alt="">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="Web Development">
+<img src="https://www.achieversit.com/management/uploads/course_image/digital-marketing-course-in-bangalore.png" alt="">
+
+</div>
+
+<div class="gallery-row">
+
+<img src="https://www.achieversit.com/management/uploads/course_image/angular-img.png" alt="">
+<img src="https://www.achieversit.com/management/uploads/course_image/react-img2.png" alt="">
+<img src="https://www.achieversit.com/management/uploads/course_image/mean-img.jpg" alt="MEAN Stack">
+
+<img src="https://www.achieversit.com/management/uploads/course_image/ui-dev.jpg" alt="">
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-box">
+
+<img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="">
+
+<p>
+AchieversIT provides a wide group of opportunities for freshers and experienced candidates who can develop their skills and build their career opportunities across multiple companies.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>CONCEPTS</h3>
+
+<ul>
+<li><a href="Q&A.html">Q & A</a></li>
+<li><a href="lists.html">Lists</a></li>
+<li><a href="table.html">Table</a></li>
+<li><a href="multimedia.html">MultiMedia</a></li>
+<li><a href="signup.html">Sign Up</a></li>
+<li><a href="signin.html">Sign In</a></li>
+</ul>
+
+</div>
+
+<div class="footer-box">
+
+<h3>TRENDING COURSES</h3>
+
+<ul>
+<li>UI Development Course</li>
+<li>Angular JS Course</li>
+<li>React JS Course</li>
+<li>Digital Marketing Course</li>
+<li>Python Course</li>
+</ul>
+
+</div>
+
+<div class="footer-box">
+
+<h3>CONTACT INFO</h3>
+
+<p>
+Toll Free: +91 8151000080 / 8217268018
+</p>
+
+<p>
+(9:00 AM to 8:00 PM IST)
+</p>
+
+<p>
+Email: trainings@achieversit.com
+</p>
+
+<p>
+Branches: Bengaluru | Hyderabad | Chennai | Pune | Mumbai | Counting+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>

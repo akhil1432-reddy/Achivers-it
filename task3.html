@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f0f4c3 50%, #e0f2f1 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 100%;
+            height: 1550px;
+        }
+
+        .table-section {
+            position: absolute;
+            background-color: white;
+            border: 3px solid #333;
+            padding: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Table 1 - Top Left - EMPLOYEES */
+        .section-1 {
+            top: 0px;
+            left: 0px;
+            width: 550px;
+        }
+
+        /* Table 2 - Center - PRODUCTS */
+        .section-2 {
+            top: 420px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 550px;
+        }
+
+        /* Table 3 - Bottom Right - COURSES */
+        .section-3 {
+            top: 840px;
+            right: 0px;
+            width: 550px;
+        }
+
+        .section-header {
+            padding: 15px 15px;
+            text-align: center;
+            border-bottom: 4px solid #333;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .section-1 .section-header {
+            background-color: #d32f2f;
+        }
+
+        .section-2 .section-header {
+            background-color: #388e3c;
+        }
+
+        .section-3 .section-header {
+            background-color: #1976d2;
+        }
+
+        .table-wrapper {
+            padding: 0;
+            max-height: none;
+            overflow: visible;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        th {
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+            color: white;
+            border: 2px solid #333;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* ===== EMPLOYEES TABLE ===== */
+        .section-1 th {
+            background-color: #d32f2f;
+        }
+
+        .section-1 tr:nth-child(odd):not(:first-child) {
+            background-color: #ffebee;
+        }
+
+        .section-1 tr:nth-child(even) {
+            background-color: #f1f8e9;
+        }
+
+        /* ===== PRODUCTS TABLE ===== */
+        .section-2 th {
+            background-color: #388e3c;
+        }
+
+        .section-2 tr:nth-child(odd):not(:first-child) {
+            background-color: #e8f5e9;
+        }
+
+        .section-2 tr:nth-child(even) {
+            background-color: #fff9c4;
+        }
+
+        /* ===== COURSES TABLE ===== */
+        .section-3 th {
+            background-color: #1976d2;
+        }
+
+        .section-3 tr:nth-child(odd):not(:first-child) {
+            background-color: #e3f2fd;
+        }
+
+        .section-3 tr:nth-child(even) {
+            background-color: #f1f8e9;
+        }
+
+        .rowspan-cell {
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #ffc0cb !important;
+            color: #333;
+            border: 2px solid #333;
+        }
+
+        .salary {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        .status {
+            background-color: #388e3c;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .price {
+            color: #1976d2;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <!-- TABLE 1 - TOP LEFT - EMPLOYEES -->
+        <div class="table-section section-1">
+            <div class="section-header">EMPLOYEE MANAGEMENT SYSTEM</div>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Dept</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Joining</th>
+                    </tr>
+                    <tr>
+                        <td>E101</td>
+                        <td>Joy</td>
+                        <td rowspan="2" class="rowspan-cell">IT</td>
+                        <td>Developer</td>
+                        <td class="salary">60,000</td>
+                        <td>joy@email</td>
+                        <td>9876543210</td>
+                        <td>2022-01-15</td>
+                    </tr>
+                    <tr>
+                        <td>E106</td>
+                        <td>Jeevan</td>
+                        <td>Tester</td>
+                        <td class="salary">52,000</td>
+                        <td>jeevan@email</td>
+                        <td>9876543215</td>
+                        <td>2021-08-18</td>
+                    </tr>
+                    <tr>
+                        <td>E102</td>
+                        <td>Vijay</td>
+                        <td>HR</td>
+                        <td>Manager</td>
+                        <td class="salary">70,000</td>
+                        <td>vijay@email</td>
+                        <td>9876543211</td>
+                        <td>2021-03-10</td>
+                    </tr>
+                    <tr>
+                        <td>E103</td>
+                        <td>Manoj</td>
+                        <td>Finance</td>
+                        <td>Analyst</td>
+                        <td class="salary">55,000</td>
+                        <td>manoj@email</td>
+                        <td>9876543212</td>
+                        <td>2023-05-20</td>
+                    </tr>
+                    <tr>
+                        <td>E104</td>
+                        <td>Kohli</td>
+                        <td rowspan="2" class="rowspan-cell">Sales & Mkt</td>
+                        <td>Executive</td>
+                        <td class="salary">50,000</td>
+                        <td>kohli@email</td>
+                        <td>9876543213</td>
+                        <td>2020-07-12</td>
+                    </tr>
+                    <tr>
+                        <td>E105</td>
+                        <td>David</td>
+                        <td>Representative</td>
+                        <td class="salary">48,000</td>
+                        <td>david@email</td>
+                        <td>9876543214</td>
+                        <td>2022-02-01</td>
+                    </tr>
+                    <tr>
+                        <td>E107</td>
+                        <td>Rohit</td>
+                        <td>Operations</td>
+                        <td>Supervisor</td>
+                        <td class="salary">58,000</td>
+                        <td>rohit@email</td>
+                        <td>9876543216</td>
+                        <td>2019-11-25</td>
+                    </tr>
+                    <tr>
+                        <td>E108</td>
+                        <td>Abhi</td>
+                        <td>Administration</td>
+                        <td>Coordinator</td>
+                        <td class="salary">45,000</td>
+                        <td>abhi@email</td>
+                        <td>9876543217</td>
+                        <td>2023-04-14</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- TABLE 2 - CENTER - PRODUCTS -->
+        <div class="table-section section-2">
+            <div class="section-header">PRODUCT DETAILS</div>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Brand</th>
+                        <th>Rating</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Bulb</td>
+                        <td>Electronics</td>
+                        <td class="price">100</td>
+                        <td>20</td>
+                        <td rowspan="4" class="rowspan-cell">Philips</td>
+                        <td>4.5</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tshirt</td>
+                        <td>Fashion</td>
+                        <td class="price">800</td>
+                        <td>15</td>
+                        <td>4.2</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Plates</td>
+                        <td>Kitchen</td>
+                        <td class="price">300</td>
+                        <td>30</td>
+                        <td>4.0</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ball</td>
+                        <td>Sports</td>
+                        <td class="price">500</td>
+                        <td>10</td>
+                        <td>4.7</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Notes</td>
+                        <td>Books</td>
+                        <td class="price">250</td>
+                        <td>40</td>
+                        <td rowspan="2" class="rowspan-cell">Classic</td>
+                        <td>4.3</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lipstick</td>
+                        <td>Beauty</td>
+                        <td class="price">300</td>
+                        <td>25</td>
+                        <td>4.1</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Car</td>
+                        <td>Toys</td>
+                        <td class="price">500</td>
+                        <td>18</td>
+                        <td>RC</td>
+                        <td>4.4</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Apples</td>
+                        <td>Groceries</td>
+                        <td class="price">150</td>
+                        <td>50</td>
+                        <td>Fresh</td>
+                        <td>4.6</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- TABLE 3 - BOTTOM RIGHT - COURSES -->
+        <div class="table-section section-3">
+            <div class="section-header">COURSES TABLE</div>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Course Name</th>
+                        <th>Dept</th>
+                        <th>Duration</th>
+                        <th>Trainer</th>
+                        <th>Mode</th>
+                        <th>Fee</th>
+                        <th>Seats</th>
+                    </tr>
+                    <tr>
+                        <td>C101</td>
+                        <td>Python Prog</td>
+                        <td>CSE</td>
+                        <td>3M</td>
+                        <td rowspan="3" class="rowspan-cell">NAGESH</td>
+                        <td>Online</td>
+                        <td class="price">5000</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>C102</td>
+                        <td>Web Dev</td>
+                        <td>CSE</td>
+                        <td>4M</td>
+                        <td>Offline</td>
+                        <td class="price">7000</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>C103</td>
+                        <td>Data Science</td>
+                        <td>AI&DS</td>
+                        <td>6M</td>
+                        <td>Online</td>
+                        <td class="price">12000</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>C104</td>
+                        <td>Java Prog</td>
+                        <td>CSE</td>
+                        <td>3M</td>
+                        <td>Anil</td>
+                        <td>Offline</td>
+                        <td class="price">6000</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>C105</td>
+                        <td>Cloud Comp</td>
+                        <td>IT</td>
+                        <td>4M</td>
+                        <td>Meena</td>
+                        <td>Online</td>
+                        <td class="price">10000</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>C106</td>
+                        <td>Cyber Sec</td>
+                        <td>IT</td>
+                        <td>5M</td>
+                        <td rowspan="2" class="rowspan-cell">Kiran</td>
+                        <td>Offline</td>
+                        <td class="price">11000</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>C107</td>
+                        <td>ML</td>
+                        <td>AI&DS</td>
+                        <td>6M</td>
+                        <td>Online</td>
+                        <td class="price">15000</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>C108</td>
+                        <td>Mobile App</td>
+                        <td>CSE</td>
+                        <td>4M</td>
+                        <td>Arjun</td>
+                        <td>Offline</td>
+                        <td class="price">8000</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>C109</td>
+                        <td>Database</td>
+                        <td>CSE</td>
+                        <td>3M</td>
+                        <td>Lakshmi</td>
+                        <td>Online</td>
+                        <td class="price">5500</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>C110</td>
+                        <td>DevOps</td>
+                        <td>IT</td>
+                        <td>4M</td>
+                        <td>Naveen</td>
+                        <td>Hybrid</td>
+                        <td class="price">9000</td>
+                        <td>25</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
